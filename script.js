@@ -64,32 +64,44 @@ navbarDblClick.addEventListener("dblclick", onNavbarDblClick);
 
 // Fonction 6
 
-var imgcard = document.querySelectorAll(".card-img-top")[0];
-console.log(imgcard);
-var textcard = document.querySelectorAll(".card-text")[0];
-console.log(textcard);
-var view = document.querySelectorAll("button.btn.btn-sm.btn-success")[0];
-console.log(view);
+var imgcard = document.querySelectorAll(".card-img-top");
+var textcard = document.querySelectorAll(".card-text");
+var view = document.querySelectorAll("button.btn.btn-sm.btn-success");
 
-var viewmouse = function() {
-  console.log("Ca marche");
+var solo = function() {
   
-  if (imgcard.style.width != "20%") {
-    imgcard.style.width = "20%"
-    textcard.hidden = true
+  if (imgcard[0].style.width != "20%") {
+    imgcard[0].style.width = "20%"
+    textcard[0].hidden = true
   } else {
-    imgcard.style.width = "100%";
-    textcard.hidden = false;
+    imgcard[0].style.width = "100%";
+    textcard[0].hidden = false;
   }
 
 };
 
-view.addEventListener("mouseover", viewmouse);
+view[0].addEventListener("mouseover", solo);
+
+
+for (let i = 0; i < view.length; i++) {
+  view[i].addEventListener("mouseover", viewmouse);
+
+var viewmouse = function() {
+  
+ if (imgcard[i+1].style.width != "20%") {
+    imgcard[i+1].style.width = "20%"
+    textcard[i+1].hidden = true
+  } else {
+    imgcard[i+1].style.width = "100%";
+    textcard[i+1].hidden = false;
+  }
+
+};
+};
 
 // Fonction 7
 
 var greybtn = document.querySelector(".btn-secondary");
-console.log(greybtn);
 var cards = document.querySelectorAll(".col-md-4");
 var firstcard = cards[0];
 var lastcard = cards[cards.length - 1];
