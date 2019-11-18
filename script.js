@@ -85,3 +85,19 @@ var viewmouse = function() {
 };
 
 view.addEventListener("mouseover", viewmouse);
+
+// Fonction 7
+
+var greybtn = document.querySelector(".btn-secondary");
+console.log(greybtn);
+var cards = document.querySelectorAll(".col-md-4");
+var firstcard = cards[0];
+var lastcard = cards[cards.length - 1];
+
+var insert = function() {
+  var insertedNode = firstcard.parentNode.insertBefore(lastcard, firstcard);
+};
+
+greybtn.addEventListener("click", insert);
+
+

@@ -13,3 +13,4 @@
 - Fonctionnalité 4 = Clique sur le bouton edit de la deuxième card. Tu peux même recliquer pour voir.<br>
 - Fonctionnalité 5 = Bootstrap c'est surfait, double clic sur la navbar.<br>
 - Fonctionnalité 6 = Passe ta souris sur le bouton view de la première card<br>
+- Fonctionnalité 7 = Appuie sur le bouton gris ==><br>
